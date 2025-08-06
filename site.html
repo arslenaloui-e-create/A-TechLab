@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A-TechLab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="A-TechLab Logo" />
+    <h1>A-TECHLAB</h1>
+    <p>De l’idée à l’objet, en un clic</p>
+    <nav>
+      <a href="#projets">Projets Arduino</a>
+      <a href="#objets3d">Objets 3D</a>
+      <a href="#formulaire">Formulaire</a>
+      <a href="#contact">Contact</a>
+      <a href="connexion.html" class="btn">Connexion</a>
+    </nav>
+  </header>
+
+  <section id="projets">
+    <h2>Nos Projets Arduino & 3D</h2>
+
+    <div class="project">
+      <h3>Poubelle Intelligente</h3>
+      <p>Une poubelle qui s'ouvre automatiquement avec un capteur de mouvement.</p>
+      <p>📦 STL : <a href="#">Lien STL</a> | ⚡ Arduino : <a href="#">Lien code</a></p>
+      <img src="images/poubelle.png" alt="Image poubelle" width="300" />
+      <pre class="terminal"><code>// Code Arduino exemple
+#include <Servo.h>
+Servo capot;
+void setup() {
+  capot.attach(9);
+}
+void loop() {
+  // Ajouter capteur ici
+  capot.write(90);
+  delay(2000);
+  capot.write(0);
+  delay(2000);
+}</code></pre>
+    </div>
+
+    <div class="project">
+      <h3>Porte de Parking</h3>
+      <p>Porte automatique contrôlée via capteur et servo moteur.</p>
+      <p>📦 STL : <a href="#">Lien STL</a> | ⚡ Arduino : <a href="#">Lien code</a></p>
+      <img src="images/parking.png" alt="Image porte" width="300" />
+      <pre class="terminal"><code>// Code Arduino exemple
+#include <Servo.h>
+Servo porte;
+void setup() {
+  porte.attach(10);
+}
+void loop() {
+  porte.write(0);
+  delay(1000);
+  porte.write(90);
+  delay(1000);
+}</code></pre>
+    </div>
+  </section>
+
+  <section id="objets3d">
+    <h2>Objets 3D Non-Arduino</h2>
+    <div class="project">
+      <h3>Support Téléphone</h3>
+      <p>Support simple pour téléphone imprimable en 3D.</p>
+      <p>📦 STL : <a href="#">Lien STL</a></p>
+      <img src="images/support.png" alt="Support téléphone" width="300" />
+    </div>
+
+    <div class="project">
+      <h3>Porte-clé personnalisé</h3>
+      <p>Exemple de porte-clé personnalisable avec texte ou logo.</p>
+      <p>📦 STL : <a href="#">Lien STL</a></p>
+      <img src="images/porte-cle.png" alt="Porte-clé" width="300" />
+    </div>
+  </section>
+
+  <section id="formulaire">
+    <h2>Demande de projet personnalisé</h2>
+    <p>Tu veux une pièce 3D ou un montage Arduino sur mesure ? Remplis ce formulaire :</p>
+    <a href="formulaire.html" class="btn">Remplir le formulaire</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Écris-nous à : <b>atechlab.3d@gmail.com</b></p>
+  </section>
+
+  <footer>
+    © 2025 A-TechLab | Créé par un jeune passionné de robotique et 3D 🇹🇳
+  </footer>
+</body>
+</html>
